@@ -9,72 +9,147 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   
   <style>
-    html, body {
-        font-family: monoscape;
-        margin: 100;
-        width: 100%;
-        height: 100%;
-		background-image: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg)
-		
-		}
-
+    * {
+	margin: 0;
+	padding: 0;
+}
+    body {
+    font-family: Arial;
+	background-image: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg)
+}	
+	nav{
+	width: 100%;
+	height: 60px;
+	background-color: blue;
+}
+	
+	nav p{
+	font-size: 25px;
+	line-height:55px;
+	float: left;
+	padding: 0px 10px;
+	color: #edeeef;
+	font-family: sans-serif;
+}
+	#icon{
+	float: left;
+	position relative;
+	top: 5px;
+}
+	nav ul {
+	float: left;
+}
+	nav ul li {
+	float: left;
+	list-style: none;
+	position: relative;
+}
+	nav ul li a {
+	display: block;
+	color: #edeeef;
+	font-size: 24px;
+	padding: 13px 14px;
+	text-decoration: none;
+}
+	nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #7094e5;
+	padding: 0px;
+	border-radius: 0px 0px 4px 4px;
+}
+	nav ul li:hover ul {
+	display: block;
+}
+	nav ul li ul li a {
+	padding: 12px 14px;
+}
+	nav ul li ul li {
+	border-radius: 4px;
+}
+	nav ul li ul li a:hover {
+	background-color: #f3f3f3;
+}
     
   
 	.jumbotron {
 	background-image: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg);
 }
-	#tab {
-	background-color: blue;
-	font-size: 30px;
+	main {
+	margin: 20px 50px;
 }
-	.ton {
-	color: rgb(255,255,255);
-	text-align: center;
+	main img {
+	float: right;
+	padding: 50px 0px;
+	line-height: 400px;
 }
-	#b1{
-	left: 200px;
+	main iframe {
+	float: left;
 }
-	#b2{
-	left: 200px;
+	#d1 {
+	position: absolute;
+	top: 750px;
+	right: 100px;
+	font-size: 35px;
 }
-	#b3{
-	left: 200px;
+	#d2 {
+	position: absolute;
+	top: 750px;
+	left: 100px;
+	font-size: 35px;
 }
-	#b4{
-	left: 200px;
-}
-	
+
+
   </style>
   
 </head>
 <body>
-<header class="container">
-  <div class="row" id="header">
-  <h1>Uzņēmuma nosaukums</h1>
-  </div>
-  <div id="tab">
-  <table>
-        <thead>
-            <tr>
-				<th><a class="ton" id="b1" href="https://ricardsliepasample.github.io/">Novedes         </a></th>
-				<th><a class="ton" id="b2" href="https://ricardsliepasample.github.io/">Novedes         </a></th>
-				<th><a class="ton" id="b3" href="https://ricardsliepasample.github.io/">Novedes         </a></th>
-				<th><a class="ton" id="b4" href="https://ricardsliepasample.github.io/">Novedes         </a></th>
-            </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
-	</div>
-	
-  </header>
+  <nav>
+  <p>uzņēmuma nosaukums</p>
+  <img id="icon" width=35px height=35px src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMq9LnzQE3XLnUMl7-qpQHMco8ASoJQB1L75meGJHHP8ES7ZBpuA">
+  <ul>
+	<li><a href="#">Par mums</a>
+	<ul>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+	</ul>
+	</li>
+	<li><a href="#">Vēsture</a>
+	<ul>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+	</ul>
+	</li>
+<li><a href="#">Partneri</a>
+	<ul>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+	</ul>
+	</li>
+<li><a href="#">Kontakti</a>
+	<ul>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+		<li><a href="#">Novades</a></li>
+	</ul>
+	</li>	
+  </ul>
+  </nav>
 	<main>
-  <section class="jumbotron">
-
-    
-	
-    
+	<section class="jumbotron">
+	<h1>Virsraksts</h1>
+	<p>Teksts, informācija un citas savarīgas lietas.</p>
+	<img src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg">
+	<p id="d1">Bildes</p>
+	<iframe width="564.75" height="423.75" src="https://www.youtube.com/embed/_mVW8tgGY_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p id="d2">Video</p>
 	  
 	  </main>
 </body>
