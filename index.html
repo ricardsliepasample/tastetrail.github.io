@@ -1,75 +1,108 @@
 <!doctype html>
-</main>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TasteTrail — Cook more. Explore more.</title>
+  <style>
+    :root {
+      --card: #fff;
+      --muted: #6b6b6b;
+      --accent: #d35400;
+    }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:20px; background:#f6f5f4; color:#402f2c; }
+    .sub { color:var(--muted); }
+    .cuisines { display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
+    .cuisine { background:var(--card); padding:12px;border-radius:10px; min-width:160px; box-shadow:0 1px 2px rgba(0,0,0,0.04); }
+    .btn.primary { background:var(--accent); color:#fff; border:none; padding:10px 12px; border-radius:8px; cursor:pointer; }
+    footer { margin-top:28px; color:var(--muted); font-size:14px; }
+    main { max-width:980px; margin:0 auto; }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Page header / hero could be here -->
 
+    <section style="margin-top:28px" id="explore">
+      <h3>Explore cuisines</h3>
+      <p class="sub">Rotate through curated menus — or build your own box from single-recipe picks.</p>
+      <div class="cuisines">
+        <div class="cuisine"><strong>Japanese Izakaya</strong><div class="sub">Yakitori, miso sides</div></div>
+        <div class="cuisine"><strong>Peruvian Fusion</strong><div class="sub">Ceviche-inspired bowls</div></div>
+        <div class="cuisine"><strong>North African</strong><div class="sub">Harissa, couscous</div></div>
+        <div class="cuisine"><strong>Korean Street</strong><div class="sub">Spicy glaze, quick pickles</div></div>
+        <div class="cuisine"><strong>Indian Home</strong><div class="sub">One-pot dals</div></div>
+        <div class="cuisine"><strong>Mediterranean</strong><div class="sub">Fresh herbs &amp; grains</div></div>
+      </div>
+    </section>
 
-<section style="margin-top:28px" id="explore">
-<h3>Explore cuisines</h3>
-<p class="sub">Rotate through curated menus — or build your own box from single-recipe picks.</p>
-<div class="cuisines">
-<div class="cuisine"><strong>Japanese Izakaya</strong><div class="sub">Yakitori, miso sides</div></div>
-<div class="cuisine"><strong>Peruvian Fusion</strong><div class="sub">Ceviche-inspired bowls</div></div>
-<div class="cuisine"><strong>North African</strong><div class="sub">Harissa, couscous</div></div>
-<div class="cuisine"><strong>Korean Street</strong><div class="sub">Spicy glaze, quick pickles</div></div>
-<div class="cuisine"><strong>Indian Home</strong><div class="sub">One-pot dals</div></div>
-<div class="cuisine"><strong>Mediterranean</strong><div class="sub">Fresh herbs & grains</div></div>
-</div>
-</section>
+    <section style="margin-top:28px;display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start">
+      <div>
+        <h3>How it works</h3>
+        <ol class="sub">
+          <li><strong>Pick a plan</strong> — Solo, Duo, or Feast.</li>
+          <li><strong>Choose your menu</strong> — chef-curated or mix-and-match.</li>
+          <li><strong>Cook in 30–45 minutes</strong> — clear steps + pro tips.</li>
+        </ol>
 
+        <h3 style="margin-top:18px">Why young cooks love TasteTrail</h3>
+        <ul class="sub">
+          <li>Built-in learning: each recipe teaches a new technique.</li>
+          <li>Ingredients measured to reduce waste.</li>
+          <li>Flexible delivery and easy swaps.</li>
+        </ul>
+      </div>
 
-<section style="margin-top:28px;display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start">
-<div>
-<h3>How it works</h3>
-<ol class="sub">
-<li><strong>Pick a plan</strong> — Solo, Duo, or Feast.</li>
-<li><strong>Choose your menu</strong> — chef-curated or mix-and-match.</li>
-<li><strong>Cook in 30–45 minutes</strong> — clear steps + pro tips.</li>
-</ol>
+      <aside style="background:var(--card);padding:16px;border-radius:12px">
+        <h4>Subscribe &amp; save</h4>
+        <p class="sub">Save up to 15% with a monthly plan. Add extras like snacks and breakfast kits.</p>
+        <form id="signup" onsubmit="signup(event)" aria-label="Signup form">
+          <label for="email" class="sub">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" required
+                 style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(64,51,44,0.06);margin-top:8px;background:transparent" />
 
+          <label for="plan" class="sub" style="margin-top:8px;display:block">Plan</label>
+          <select id="plan" name="plan" style="width:100%;padding:10px;border-radius:10px;margin-top:8px;background:transparent;color:inherit;border:1px solid rgba(64,51,44,0.06)">
+            <option>Solo Starter</option>
+            <option>Roommate Duo</option>
+            <option>Friends Feast</option>
+          </select>
+          <button type="submit" class="btn primary" style="width:100%;margin-top:12px">Start free trial</button>
+        </form>
+      </aside>
+    </section>
 
-<h3 style="margin-top:18px">Why young cooks love TasteTrail</h3>
-<ul class="sub">
-<li>Built-in learning: each recipe teaches a new technique.</li>
-<li>Ingredients measured to reduce waste.</li>
-<li>Flexible delivery and easy swaps.</li>
-</ul>
-</div>
+    <footer>
+      <div>© <strong>TasteTrail</strong> — Cook more. Explore more.</div>
+      <div style="margin-top:8px;color:var(--muted)">Built with ♥ for young cooks. Questions? <a href="mailto:hello@tastetrail.example" style="color:var(--accent);text-decoration:none">hello@tastetrail.example</a></div>
+    </footer>
+  </main>
 
+  <script>
+    function openSignup(){
+      var form = document.getElementById('signup');
+      var email = document.getElementById('email');
+      if(form && typeof form.scrollIntoView === 'function'){
+        form.scrollIntoView({behavior:'smooth'});
+      }
+      if(email && typeof email.focus === 'function'){
+        email.focus();
+      }
+    }
 
-<aside style="background:var(--card);padding:16px;border-radius:12px">
-<h4>Subscribe & save</h4>
-<p class="sub">Save up to 15% with a monthly plan. Add extras like snacks and breakfast kits.</p>
-<form id="signup" onsubmit="event.preventDefault(); signup();" aria-label="Signup form">
-<label for="email" class="sub">Email</label>
-<input id="email" name="email" type="email" placeholder="you@email.com" required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(64,51,44,0.06);margin-top:8px;background:transparent;color:inherit">
-<label for="plan" class="sub" style="margin-top:8px;display:block">Plan</label>
-<select id="plan" name="plan" style="width:100%;padding:10px;border-radius:10px;margin-top:8px;background:transparent;color:inherit;border:1px solid rgba(64,51,44,0.06)">
-<option>Solo Starter</option>
-<option>Roommate Duo</option>
-<option>Friends Feast</option>
-</select>
-<button type="submit" class="btn primary" style="width:100%;margin-top:12px">Start free trial</button>
-</form>
-</aside>
-</section>
-
-
-<footer>
-<div>© <strong>TasteTrail</strong> — Cook more. Explore more.</div>
-<div style="margin-top:8px;color:var(--muted)">Built with ♥ for young cooks. Questions? <a href="#" style="color:var(--accent);text-decoration:none">hello@tastetrail.example</a></div>
-</footer>
-</div>
-
-
-<script>
-function openSignup(){document.getElementById('signup').scrollIntoView({behavior:'smooth'});document.getElementById('email').focus();}
-function signup(){
-const email = document.getElementById('email').value;
-const plan = document.getElementById('plan').value;
-if(!email) return alert('Please enter your email');
-// placeholder: in a real app you'd send to the server
-alert('Thanks! ' + email + '\nYou chose: ' + plan + '\n(Trial redemption simulated)');
-document.getElementById('signup').reset();
-}
-</script>
+    function signup(e){
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
+      var emailEl = document.getElementById('email');
+      var planEl = document.getElementById('plan');
+      if(!emailEl) return alert('Email input not found on the page.');
+      var email = emailEl.value.trim();
+      var plan = planEl ? planEl.value : '';
+      if(!email) return alert('Please enter your email');
+      // placeholder: in a real app you'd send to the server
+      alert('Thanks! ' + email + '\nYou chose: ' + plan + '\n(Trial redemption simulated)');
+      var form = document.getElementById('signup');
+      if(form && typeof form.reset === 'function') form.reset();
+    }
+  </script>
 </body>
 </html>
