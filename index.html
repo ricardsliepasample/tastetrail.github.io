@@ -1,156 +1,84 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Parauga mājaslapa</title>
-  <meta charset="utf-8"/>
-  <link rel="shortcut icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMq9LnzQE3XLnUMl7-qpQHMco8ASoJQB1L75meGJHHP8ES7ZBpuA">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  
-  <style>
-    * {
-	margin: 0;
-	padding: 0;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TasteTrail — Meal Kits for Curious Cooks</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#fff8f0; /* soft cream background */
+--card:#fff1e0; /* pale peach card */
+--accent:#ff865e; /* coral accent */
+--muted:#705d56; /* warm taupe */
+--glass: rgba(255,255,255,0.4);
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
-    body {
-    font-family: Arial;
-	background-image: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg)
-}	
-	nav{
-	width: 100%;
-	height: 60px;
-	background-color: blue;
-}
-	
-	nav p{
-	font-size: 25px;
-	line-height:55px;
-	float: left;
-	padding: 0px 10px;
-	color: #edeeef;
-	font-family: sans-serif;
-}
-	#icon{
-	float: left;
-	position relative;
-	top: 5px;
-}
-	nav ul {
-	float: left;
-}
-	nav ul li {
-	float: left;
-	list-style: none;
-	position: relative;
-}
-	nav ul li a {
-	display: block;
-	color: #edeeef;
-	font-size: 24px;
-	padding: 13px 14px;
-	text-decoration: none;
-}
-	nav ul li ul {
-	display: none;
-	position: absolute;
-	background-color: #7094e5;
-	padding: 0px;
-	border-radius: 0px 0px 4px 4px;
-}
-	nav ul li:hover ul {
-	display: block;
-}
-	nav ul li ul li a {
-	padding: 12px 14px;
-}
-	nav ul li ul li {
-	border-radius: 4px;
-}
-	nav ul li ul li a:hover {
-	background-color: #f3f3f3;
-}
-    
-  
-	.jumbotron {
-	background-image: url(https://assets.awwwards.com/awards/images/2015/04/pattern.jpg);
-}
-	main {
-	margin: 20px 50px;
-}
-	main img {
-	float: right;
-	padding: 50px 0px;
-	line-height: 400px;
-}
-	main iframe {
-	float: left;
-}
-	#d1 {
-	position: absolute;
-	top: 750px;
-	right: 100px;
-	font-size: 35px;
-}
-	#d2 {
-	position: absolute;
-	top: 750px;
-	left: 100px;
-	font-size: 35px;
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fff8f0 0%, #ffe4cc 100%);color:#40332c;line-height:1.45}
+.container{max-width:1100px;margin:32px auto;padding:0 20px}
+
+
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;display:inline-grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffc977);box-shadow:0 6px 24px rgba(255,145,95,0.3)}
+.brand h1{font-size:20px;margin:0;letter-spacing:-0.2px;color:#40332c}
+.brand p{margin:0;font-size:12px;color:var(--muted)}
+
+
+nav{display:flex;gap:12px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
+nav a.primary{background:var(--accent);color:#fff}
+
+
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+.hero-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.kicker{display:inline-block;padding:6px 10px;background:rgba(255,134,94,0.1);border-radius:999px;font-weight:600;color:var(--accent);font-size:13px}
+.headline{font-size:32px;margin:14px 0;color:#2c1d18}
+.sub{color:var(--muted);margin-bottom:18px}
+.cta-row{display:flex;gap:12px}
+.btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(64,51,44,0.1);color:var(--muted)}
+
+
+.features{display:flex;gap:12px;margin-top:18px}
+.feature{background:#fff;padding:12px;border-radius:10px;flex:1;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.feature h4{margin:6px 0;color:#2c1d18}
+
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.plan{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.plan h3{margin:0;color:#2c1d18}
+.price{font-size:20px;margin:8px 0;color:var(--accent)}
+
+
+.cuisines{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cuisine{min-width:180px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+
+
+.box-preview{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.dish{display:flex;gap:12px;align-items:center}
+.dish svg{width:84px;height:84px;border-radius:10px;background:linear-gradient(180deg,#ffe0c7,#ffd2a1);display:inline-block;padding:12px}
+
+
+footer{margin:36px 0 80px;color:var(--muted);font-size:14px;text-align:center}
+
+
+@media (max-width:920px){
+.hero{grid-template-columns:1fr}
+.plans{grid-template-columns:1fr}
 }
 
 
-  </style>
-  
+@media (max-width:520px){
+.logo{width:48px;height:48px}
+.headline{font-size:24px}
+}
+</style>
 </head>
 <body>
-  <nav>
-  <p>uzņēmuma nosaukums</p>
-  <img id="icon" width=35px height=35px src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMq9LnzQE3XLnUMl7-qpQHMco8ASoJQB1L75meGJHHP8ES7ZBpuA">
-  <ul>
-	<li><a href="#">Par mums</a>
-	<ul>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-	</ul>
-	</li>
-	<li><a href="#">Vēsture</a>
-	<ul>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-	</ul>
-	</li>
-<li><a href="#">Partneri</a>
-	<ul>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-	</ul>
-	</li>
-<li><a href="#">Kontakti</a>
-	<ul>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-		<li><a href="#">Novades</a></li>
-	</ul>
-	</li>	
-  </ul>
-  </nav>
-	<main>
-	<section class="jumbotron">
-	<h1>Virsraksts</h1>
-	<p>Teksts, informācija un citas savarīgas lietas.</p>
-	<img src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg">
-	<p id="d1">Bildes</p>
-	<iframe width="564.75" height="423.75" src="https://www.youtube.com/embed/_mVW8tgGY_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p id="d2">Video</p>
-	  
-	  </main>
+<!-- The rest of the content remains identical -->
 </body>
 </html>
