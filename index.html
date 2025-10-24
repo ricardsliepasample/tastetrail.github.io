@@ -20,9 +20,10 @@ body{margin:0;background:linear-gradient(180deg,#fff8f0 0%, #ffe4cc 100%);color:
 .container{max-width:1100px;margin:32px auto;padding:0 20px}
 
 
+/* header */
 header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:56px;height:56px;display:inline-grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffc977);box-shadow:0 6px 24px rgba(255,145,95,0.3)}
+.logo{width:56px;height:56px;display:inline-grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffc977);box-shadow:0 6px 24px rgba(255,145,95,0.25)}
 .brand h1{font-size:20px;margin:0;letter-spacing:-0.2px;color:#40332c}
 .brand p{margin:0;font-size:12px;color:var(--muted)}
 
@@ -32,33 +33,38 @@ nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;b
 nav a.primary{background:var(--accent);color:#fff}
 
 
+/* hero */
 .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
-.hero-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
-.kicker{display:inline-block;padding:6px 10px;background:rgba(255,134,94,0.1);border-radius:999px;font-weight:600;color:var(--accent);font-size:13px}
+.hero-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06)}
+.kicker{display:inline-block;padding:6px 10px;background:rgba(255,134,94,0.08);border-radius:999px;font-weight:600;color:var(--accent);font-size:13px}
 .headline{font-size:32px;margin:14px 0;color:#2c1d18}
 .sub{color:var(--muted);margin-bottom:18px}
 .cta-row{display:flex;gap:12px}
 .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
 .btn.primary{background:var(--accent);color:#fff}
-.btn.ghost{background:transparent;border:1px solid rgba(64,51,44,0.1);color:var(--muted)}
+.btn.ghost{background:transparent;border:1px solid rgba(64,51,44,0.08);color:var(--muted)}
 
 
+/* card list */
 .features{display:flex;gap:12px;margin-top:18px}
-.feature{background:#fff;padding:12px;border-radius:10px;flex:1;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.feature{background:#fff;padding:12px;border-radius:10px;flex:1;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
 .feature h4{margin:6px 0;color:#2c1d18}
 
 
+/* plan card */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-.plan{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.plan{background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
 .plan h3{margin:0;color:#2c1d18}
 .price{font-size:20px;margin:8px 0;color:var(--accent)}
 
 
+/* cuisine explorer */
 .cuisines{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.cuisine{min-width:180px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.cuisine{min-width:180px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
 
 
-.box-preview{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+/* right column: sample box preview */
+.box-preview{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
 .dish{display:flex;gap:12px;align-items:center}
 .dish svg{width:84px;height:84px;border-radius:10px;background:linear-gradient(180deg,#ffe0c7,#ffd2a1);display:inline-block;padding:12px}
 
@@ -66,6 +72,7 @@ nav a.primary{background:var(--accent);color:#fff}
 footer{margin:36px 0 80px;color:var(--muted);font-size:14px;text-align:center}
 
 
+/* responsive */
 @media (max-width:920px){
 .hero{grid-template-columns:1fr}
 .plans{grid-template-columns:1fr}
@@ -78,7 +85,4 @@ footer{margin:36px 0 80px;color:var(--muted);font-size:14px;text-align:center}
 }
 </style>
 </head>
-<body>
-<!-- The rest of the content remains identical -->
-</body>
 </html>
