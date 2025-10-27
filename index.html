@@ -5,22 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TasteTrail — Cook more. Explore more.</title>
   <style>
+    /* Warmer color palette applied */
     :root {
-      --card: #fff;
-      --muted: #6b6b6b;
-      --accent: #d35400;
+      --card: #fff6f1;        /* warm card background */
+      --muted: #7a5a48;       /* warm muted text */
+      --accent: #ff6b3a;      /* warm accent / CTA */
+      --page-bg: #fff8f5;     /* overall page background */
+      --text: #3a2b26;        /* primary text (warm dark brown) */
     }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:20px; background:#f6f5f4; color:#402f2c; }
+
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:20px; background:var(--page-bg); color:var(--text); }
     .sub { color:var(--muted); }
     .cuisines { display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
-    .cuisine { background:var(--card); padding:12px;border-radius:10px; min-width:160px; box-shadow:0 1px 2px rgba(0,0,0,0.04); position:relative; overflow:hidden; }
+    .cuisine { background:var(--card); padding:12px;border-radius:10px; min-width:160px; box-shadow:0 1px 2px rgba(60,40,30,0.06); position:relative; overflow:hidden; }
     .cuisine img { width:100%; height:120px; object-fit:cover; border-radius:8px; display:block; margin-bottom:8px; }
     .img-failed { opacity:0.35; filter:grayscale(60%); }
     .img-error-badge {
       position:absolute;
       top:10px;
       right:10px;
-      background:rgba(220,40,40,0.95);
+      background:rgba(192,50,50,0.95);
       color:#fff;
       padding:4px 8px;
       font-size:12px;
@@ -43,7 +47,8 @@
       <p class="sub">Rotate through curated menus — or build your own box from single-recipe picks.</p>
       <div class="cuisines">
         <div class="cuisine">
-          <img src="https://images.unsplash.com/photo-1543352634-8c2a7f9c4a3b?auto=format&fit=crop&w=800&q=60" alt="Yakitori skewers grilled over charcoal" loading="lazy" />
+          <!-- Replaced Japanese Izakaya image with a query-based Unsplash image targeted at yakitori/japanese food -->
+          <img src="https://source.unsplash.com/800x600/?yakitori,japanese-food" alt="Yakitori skewers grilled over charcoal" loading="lazy" />
           <strong>Japanese Izakaya</strong>
           <div class="sub">Yakitori, miso sides</div>
         </div>
@@ -58,7 +63,8 @@
           <div class="sub">Harissa, couscous</div>
         </div>
         <div class="cuisine">
-          <img src="https://images.unsplash.com/photo-1604908554022-3e6f9a1d6a7c?auto=format&fit=crop&w=800&q=60" alt="Korean street food with spicy glaze and quick pickles" loading="lazy" />
+          <!-- Replaced Korean Street image with a query-based Unsplash image targeted at korean street food -->
+          <img src="https://source.unsplash.com/800x600/?korean-street-food,tteokbokki,street-food" alt="Korean street food with spicy glaze and quick pickles" loading="lazy" />
           <strong>Korean Street</strong>
           <div class="sub">Spicy glaze, quick pickles</div>
         </div>
